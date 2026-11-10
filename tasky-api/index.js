@@ -10,8 +10,11 @@ const port = process.env.PORT;
 
 app.use(express.static('public'));
 
+app.use(express.json());
+
 app.use('/api/tasks', tasksRouter);
 
 app.listen(port, () => {
   console.info(`Server running at ${port}`);
 });
+
